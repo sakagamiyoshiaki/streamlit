@@ -7,7 +7,7 @@ LOGGER = get_logger(__name__)
 def run():
     st.set_page_config(
         page_title="Olá",
-        page_icon="👋",
+        page_icon="👋❤",
     )
 
     st.write("# Bem Vindo ao Streamlit  ! 👋")
