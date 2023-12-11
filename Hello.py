@@ -17,8 +17,8 @@ def run():
     st.markdown(
         """
         Está é uma página de teste para análise de dados
-        ### Sites de dados do mercado
-        - Página da [B3](https://www.b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/cotacoes/cotacoes/)
+        ### Sites de dados das estações meteorológicas
+        - Página da [IFSC](https://www.wunderground.com/dashboard/pws/IPALHO4)
         """
     )
 
