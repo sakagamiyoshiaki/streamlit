@@ -1,0 +1,16 @@
+dd=pd.date_range(start='9/16/2022', freq='H', periods=1000000)
+
+key='4c09891a71d24ce289891a71d29ce27f'
+station='IPALHO4'
+df3=pd.DataFrame([])
+
+for i in range(0,24):
+  data=dd.year.astype(str)[i*24]+dd.month.map("{:02}".format)[i*24]+dd.day.map("{:02}".format)[i*24]
+  reqc = requests.get('https://api.weather.com/v2/pws/history/hourly?stationId='+station+'&format=json&units=m&date='+data+'&apiKey='+key)
+
+  df=pd.DataFrame(reqc.json()['observations']);
+  df2=pd.json_normalize(df['metric'])
+  df3=pd.concat([df3,df2],axis=0)
+
+df3.index=dd[:len(df3)]
+df3
