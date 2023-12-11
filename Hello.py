@@ -12,9 +12,6 @@ doc_ref = db.collection("stations").document("maciambu")
 # Then get the data at that reference.
 doc = doc_ref.get()
 
-# Let's see what we got!
-st.write("The id is: ", doc.id)
-st.write("The contents are: ", doc.to_dict())
 
 LOGGER = get_logger(__name__)
 
@@ -35,6 +32,10 @@ def run():
         - Página da [IFSC](https://www.wunderground.com/dashboard/pws/IPALHO4)
         """
     )
+    # Let's see what we got!
+    st.write("The id is: ", doc.id)
+    st.write("The contents are: ", doc.to_dict())
+
 
 
 if __name__ == "__main__":
