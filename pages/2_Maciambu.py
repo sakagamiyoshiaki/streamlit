@@ -10,7 +10,7 @@ import pandas as pd
 key='4c09891a71d24ce289891a71d29ce27f'
 
 station='IPALHO4'
-data='20221005'
+data='20231211'
 
 reqc = requests.get('https://api.weather.com/v2/pws/history/hourly?stationId='+station+'&format=json&units=m&date='+data+'&apiKey='+key)
 
