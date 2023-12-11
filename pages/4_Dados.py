@@ -4,7 +4,7 @@ from google.cloud import firestore
 
 
 # Authenticate to Firestore with the JSON account key.
-db = firestore.Client.from_service_account_json("firestore-key.json")
+db = firestore.Client.from_service_account_json("../pages/firestore-key.json")
 
 # Create a reference to the Google post.
 doc_ref = db.collection("stations").document("maciambu")
