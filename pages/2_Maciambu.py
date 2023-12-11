@@ -27,8 +27,8 @@ def plotting_demo():
 
 
 st.set_page_config(page_title="Kitezone - Maciambu - IPALHO4", page_icon="📈")
-st.markdown("# Plotting Demo")
-st.sidebar.header("Plotting Demo")
+st.markdown("# Maciambu")
+st.sidebar.header("Maciambu")
 st.write(
     """Monitoramento das condições meteorológicas em Maciambú!"""
 )
