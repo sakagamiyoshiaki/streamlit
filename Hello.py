@@ -4,7 +4,12 @@ from streamlit.logger import get_logger
 from google.cloud import firestore
 
 # Authenticate to Firestore with the JSON account key.
-db = firestore.Client.from_service_account_json("firestore-key.json")
+# db = firestore.Client.from_service_account_json("firestore-key.json")
+
+import json
+key_dict = json.loads(st.secrets["textkey"])
+creds = service_account.Credentials.from_service_account_info(key_dict)
+db = firestore.Client(credentials=creds, project="webyoshi")
 
 # Create a reference to the Google post.
 doc_ref = db.collection("stations").document("maciambu")
