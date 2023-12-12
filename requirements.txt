@@ -1,0 +1,9 @@
+altair
+numpy
+pandas
+pydeck
+streamlit
+matplotlib
+scikit-learn
+google-cloud-firestore
+json
